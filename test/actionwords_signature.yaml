@@ -1,0 +1,103 @@
+---
+- name: I entered borrowing amount and period in header calculator widget
+  uid: b3ed181d-3111-4c3a-9582-3cdda2123a4c
+  parameters:
+  - name: __free_text
+  - name: __datatable
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: click on Compare home loans button
+  uid: e7022eb3-7251-4d88-9832-8dd53f967467
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: page should scroll to table below
+  uid: db15d021-f876-48c1-afe0-a8149b253cda
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: I entered negative borrowing amount
+  uid: c46a98cb-5ab8-4be4-8700-5aebd8c43068
+  parameters:
+  - name: __datatable
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: 'then page should not scroll to table below '
+  uid: af71a1ed-6b7a-4e47-b1f7-b66806107c73
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: should show validation error message for amount field
+  uid: 93268271-9436-4539-ac15-a07c383e13a3
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: I entered invalid borrowing amount
+  uid: 7edb2911-04ab-4ace-945d-fefcb02917d8
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: table calculator fields should pre fill with the same values I entered in
+    header calculator widget
+  uid: ba8ea6b4-2abb-410e-b27a-8838def62f34
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: FHL homepage is refreshed
+  uid: 17e86f66-654c-4102-a0d1-a0605ae764a1
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: Previously entered value must clear from header calculator widget and table
+    at the bottom
+  uid: 73245474-186c-4955-a33c-c6a7f8ab1ceb
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: I open FHL home page
+  uid: 68dd170e-354f-4a6e-8f3c-9cd5b2f36139
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: provider logo bar should display containing all providers
+  uid: 853bb52f-a38e-4f58-94e8-e2bfc4cb4840
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: number of provider logos is increased in logo bar
+  uid: a5240a6d-9f99-477a-8d6b-db8cf149b745
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: scroll bar should automatically appear on logo bar
+  uid: 9c40a81d-d078-4fc5-a958-74cc3faac4b7
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: video should play on a pop up modal
+  uid: a0280a81-6b77-4680-a4df-884e17df4e1a
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: I open home page on mobile
+  uid: f2032abc-634b-43b5-bf97-e4af9c81a00e
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: all page elements should function as expected
+  uid: 62eede6b-9c4c-4827-aa0c-a840d6737c05
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: I open home page on different browser
+  uid: ab2551cc-910f-4352-a799-8f88b3e6ef50
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: all page elements should function as expected in all browsers
+  uid: 6385bd81-0625-4947-becf-0058d2797da9
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: I entered borrowing amount and period
+  uid: 130eee75-9aaf-408a-b6d0-bedf1a650060
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: then page should scroll to table below
+  uid: cde520e8-4539-4293-a861-f861144e42c7
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: I enter input in FIN homepage home loan calculator
+  uid: d2da8444-8776-4272-b43a-ee6646cec5fe
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: I click on get started button
+  uid: 91a5618c-e712-46b0-8e31-70bc0aeba5bc
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: FHL homepage calculator widget should pre-fill same values that are entered
+    in FIN homepage home loan calculator
+  uid: 01d58f59-0856-4212-94a3-e57c7b4265fc
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
