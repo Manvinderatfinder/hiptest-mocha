@@ -70,5 +70,8 @@ exports.Actionwords = {
   },
   fHLHomepageCalculatorWidgetShouldPrefillSameValuesThatAreEnteredInFINHomepageHomeLoanCalculator: function () {
 
+  },
+  iClickOnPlayButtonOfHomeLoanGuideVideo: function () {
+
   }
 };

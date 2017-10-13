@@ -94,10 +94,10 @@ describe('FHL homepage split test', function () {
 
   it('Home loan guide video', function () {
     // Tags: key:Page element
-    // TODO: Implement action: "Given I click on play button of Home loan guide video"
+    // Given I click on play button of Home loan guide video
+    this.actionwords.iClickOnPlayButtonOfHomeLoanGuideVideo();
     // Then video should play on a pop up modal
     this.actionwords.videoShouldPlayOnAPopUpModal();
-    throw 'Not implemented';
   });
 
   it('Cross device compatibility', function () {
