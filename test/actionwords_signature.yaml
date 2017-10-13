@@ -101,3 +101,7 @@
   uid: 01d58f59-0856-4212-94a3-e57c7b4265fc
   parameters: []
   body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: I click on play button of Home loan guide video
+  uid: a77eef36-f51f-4a89-85fe-441eba9ed9aa
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
