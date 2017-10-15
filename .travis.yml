@@ -7,8 +7,9 @@ before_install:
   - hiptest-publisher -c mocha.conf --only=tests --test-run-id=109646
 
 script:
-  - mocha test
+  - mocha test --recursive --reporter mocha-junit-reporter
+
 
 after_script:
   - hiptest-publisher -c mocha.conf --push=test-results.xml --test-run-id=109646
-  
+
