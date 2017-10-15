@@ -60,12 +60,12 @@ describe('FHL homepage split test', function () {
 
   it('FIN HP pre fill inputs', function () {
     // Tags: key:Field Parameters
+    // Then FHL homepage calculator widget should pre-fill same values that are entered in FIN homepage home loan calculator
+    this.actionwords.fHLHomepageCalculatorWidgetShouldPrefillSameValuesThatAreEnteredInFINHomepageHomeLoanCalculator();
     // Given I enter input in FIN homepage home loan calculator
     this.actionwords.iEnterInputInFINHomepageHomeLoanCalculator();
     // And I click on get started button
     this.actionwords.iClickOnGetStartedButton();
-    // Then FHL homepage calculator widget should pre-fill same values that are entered in FIN homepage home loan calculator
-    this.actionwords.fHLHomepageCalculatorWidgetShouldPrefillSameValuesThatAreEnteredInFINHomepageHomeLoanCalculator();
   });
 
   it('Clear calculator inputs in page refresh', function () {
