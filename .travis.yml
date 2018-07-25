@@ -4,13 +4,12 @@ before_install:
   - rvm install 2.2
   - rvm use 2.2
   - gem install hiptest-publisher
-  - hiptest-publisher -c mocha.conf --only=tests --test-run-id=109646
+  - hiptest-publisher -c mocha.conf --only=tests --test-run-id=177648
 
 script:
   - mocha test
 
 
 after_script:
-  - hiptest-publisher -c mocha.conf --push=test-results.xml --test-run-id=109646
+  - hiptest-publisher -c mocha.conf --push=test-results.xml --test-run-id=177648
   - curl -X POST -F file=@result.xml https://hiptest.net/import_test_reports/18085250958692834571879966767312306022663322081593461795/109646/nunit
-

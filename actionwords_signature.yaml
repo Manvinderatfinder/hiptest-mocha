@@ -1,0 +1,113 @@
+---
+- name: I am on a FHI quote page /health-insurance/quote
+  uid: 1a14250a-7f10-44b6-8ac9-956c763c9c0c
+  parameters:
+  - name: __free_text
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: 'top picks should only display '
+  uid: 7b4b3618-2423-44ef-9e17-6606c857786d
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: a shortcode parameter "p1"= true  is used.
+  uid: c57275ee-0cb6-4040-bc81-41cc2bf8024a
+  parameters:
+  - name: p1
+  - name: __datatable
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: top picks should contain three categories
+  uid: 685fb8ac-7ad9-4157-8f83-c0ce71f75c75
+  parameters:
+  - name: __datatable
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: I get a quote for Single female + Hospital and extra
+  uid: 82e9c4b7-c39b-4e05-aee5-cae79106c44b
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: 'top picks should display policies for '
+  uid: 85683743-b839-41d2-ad74-03b2827478ae
+  parameters:
+  - name: __datatable
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: I get a quote for Single female + Hospital only
+  uid: 7b944dc7-0795-4629-8647-a8be7ab3548f
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: top picks should display policies for   Hospital - Basic cover
+  uid: c0576c63-7876-411e-8519-00ed5615619d
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: I get a quote for Extra only
+  uid: 7d6ea3f2-c0a5-4150-8a8e-0e8f86a94d23
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: top picks should display policies for   Extras - Basic cover
+  uid: ddd9f347-aabd-49c7-b37f-b7f8ce0f6a01
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: I am on FHI quote page
+  uid: 6103f007-f995-4cfb-97be-d71532f715a7
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: top picks should display above quote table
+  uid: ce1aa174-6698-4c9f-b4f0-51427384c853
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: the max number of top picks should be 3
+  uid: 6d8a0fc3-4412-49fc-b090-da1fe6ca7341
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: top pick is active in FHI quote page
+  uid: a3f978e3-a817-4fd0-a818-65186b47abd9
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: top picks should display max of 2 policy from same provider
+  uid: '049c1fb0-2278-433b-a97b-81bbd4c2f69b'
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: top picks is active in FHI quote page
+  uid: cb347202-e902-4af4-8872-3352e91d8faf
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: top picks should display unique policies for all three top picks
+  uid: 92a2e0b4-ebda-4706-9685-9500a31fc7ca
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: top picks should display any split policy
+  uid: 41ff8365-1eb2-4e7f-b32e-665528a87bc9
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: top picks should display any split policy without CTA button
+  uid: deec39d8-b6a3-4259-8cec-775ac67e31f5
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: if one of there policies goes inactive
+  uid: afa331f7-11eb-4eda-a5b0-e37918f5bd7c
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: the next policy suits to these categories -  Cheapest, Best Value, Most popular
+    should automatically display there
+  uid: 1003abd2-234f-4478-8c35-08ea90888fa0
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: there are only 2 top picks available for that particular quote
+  uid: b4e07263-7ed8-4627-bdbd-96f9d9e12e33
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: top picks section should display 2 top picks and display a "p1" placeholder
+    in place for the missing one
+  uid: 3e08df50-0c5c-4e21-a017-b3c5807483c0
+  parameters:
+  - name: p1
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: I open a direct quote url
+  uid: 4856590d-d246-4735-bb6e-f6ca7aacfa98
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: top picks should be accessible through direct quote link
+  uid: f5e4c541-588f-488b-953f-504b945ae88d
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
+- name: Open
+  uid: 00b8d1e3-ddc7-46a0-914d-a8e30451ffcb
+  parameters: []
+  body_hash: d41d8cd98f00b204e9800998ecf8427e
