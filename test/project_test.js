@@ -14,7 +14,7 @@ describe('Hiptest demo -  FHI quick picks', function () {
     }
 
     it('lifestage', function () {
-      defaultTopPicksDisplay.apply(this, ['single_male']);
+      defaultTopPicksDisplay.apply(this, ['']);
     });
 
     it('cover_type', function () {
