@@ -1,77 +1,80 @@
 exports.Actionwords = {
-  iEnteredBorrowingAmountAndPeriodInHeaderCalculatorWidget: function (__free_text, __datatable) {
+  iAmOnAFHIQuotePageHealthinsurancequote: function (__free_text) {
 
   },
-  clickOnCompareHomeLoansButton: function () {
+  topPicksShouldOnlyDisplay: function () {
 
   },
-  pageShouldScrollToTableBelow: function () {
+  aShortcodeParameterP1TrueIsUsed: function (p1, __datatable) {
 
   },
-  iEnteredNegativeBorrowingAmount: function (__datatable) {
+  topPicksShouldContainThreeCategories: function (__datatable) {
 
   },
-  thenPageShouldNotScrollToTableBelow: function () {
+  iGetAQuoteForSingleFemaleHospitalAndExtra: function () {
 
   },
-  shouldShowValidationErrorMessageForAmountField: function () {
+  topPicksShouldDisplayPoliciesFor: function (__datatable) {
 
   },
-  iEnteredInvalidBorrowingAmount: function () {
+  iGetAQuoteForSingleFemaleHospitalOnly: function () {
 
   },
-  tableCalculatorFieldsShouldPreFillWithTheSameValuesIEnteredInHeaderCalculatorWidget: function () {
+  topPicksShouldDisplayPoliciesForHospitalBasicCover: function () {
 
   },
-  fHLHomepageIsRefreshed: function () {
+  iGetAQuoteForExtraOnly: function () {
 
   },
-  previouslyEnteredValueMustClearFromHeaderCalculatorWidgetAndTableAtTheBottom: function () {
+  topPicksShouldDisplayPoliciesForExtrasBasicCover: function () {
 
   },
-  iOpenFHLHomePage: function () {
+  iAmOnFHIQuotePage: function () {
 
   },
-  providerLogoBarShouldDisplayContainingAllProviders: function () {
+  topPicksShouldDisplayAboveQuoteTable: function () {
 
   },
-  numberOfProviderLogosIsIncreasedInLogoBar: function () {
+  theMaxNumberOfTopPicksShouldBe3: function () {
 
   },
-  scrollBarShouldAutomaticallyAppearOnLogoBar: function () {
+  topPickIsActiveInFHIQuotePage: function () {
 
   },
-  videoShouldPlayOnAPopUpModal: function () {
+  topPicksShouldDisplayMaxOf2PolicyFromSameProvider: function () {
 
   },
-  iOpenHomePageOnMobile: function () {
+  topPicksIsActiveInFHIQuotePage: function () {
 
   },
-  allPageElementsShouldFunctionAsExpected: function () {
+  topPicksShouldDisplayUniquePoliciesForAllThreeTopPicks: function () {
 
   },
-  iOpenHomePageOnDifferentBrowser: function () {
+  topPicksShouldDisplayAnySplitPolicy: function () {
 
   },
-  allPageElementsShouldFunctionAsExpectedInAllBrowsers: function () {
+  topPicksShouldDisplayAnySplitPolicyWithoutCTAButton: function () {
 
   },
-  iEnteredBorrowingAmountAndPeriod: function () {
+  ifOneOfTherePoliciesGoesInactive: function () {
 
   },
-  thenPageShouldScrollToTableBelow: function () {
+  theNextPolicySuitsToTheseCategoriesCheapestBestValueMostPopularShouldAutomaticallyDisplayThere: function () {
 
   },
-  iEnterInputInFINHomepageHomeLoanCalculator: function () {
+  thereAreOnly2TopPicksAvailableForThatParticularQuote: function () {
 
   },
-  iClickOnGetStartedButton: function () {
+  topPicksSectionShouldDisplay2TopPicksAndDisplayAP1PlaceholderInPlaceForTheMissingOne: function (p1) {
 
   },
-  fHLHomepageCalculatorWidgetShouldPrefillSameValuesThatAreEnteredInFINHomepageHomeLoanCalculator: function () {
+  iOpenADirectQuoteUrl: function () {
 
   },
-  iClickOnPlayButtonOfHomeLoanGuideVideo: function () {
+  topPicksShouldBeAccessibleThroughDirectQuoteLink: function () {
+
+  },
+  open: function () {
 
   }
 };

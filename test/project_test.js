@@ -1,118 +1,133 @@
-describe('FHL homepage split test', function () {
+describe('Hiptest demo -  FHI quick picks', function () {
   beforeEach(function () {
     this.actionwords = Object.create(require('./actionwords.js').Actionwords);
   });
 
-  it('Compare home loan with valid input', function () {
-    // Tags: key:Field Parameters
-    // Given I entered borrowing amount and period
-    this.actionwords.iEnteredBorrowingAmountAndPeriod();
-    // And click on Compare home loans button
-    this.actionwords.clickOnCompareHomeLoansButton();
-    // Then then page should scroll to table below
-    this.actionwords.thenPageShouldScrollToTableBelow();
-  });
-
-  describe('Compare home loan with a negative value', function () {
-    function compareHomeLoanWithANegativeValue (value) {
-      // Tags: key:Field Parameters
-      // Given I entered negative borrowing amount
-      this.actionwords.iEnteredNegativeBorrowingAmount("||");
-      // And click on Compare home loans button
-      this.actionwords.clickOnCompareHomeLoansButton();
-      // Then then page should not scroll to table below
-      this.actionwords.thenPageShouldNotScrollToTableBelow();
-      // And should show validation error message for amount field
-      this.actionwords.shouldShowValidationErrorMessageForAmountField();
+  describe('Default top picks display', function () {
+    function defaultTopPicksDisplay (fhi_quote_form_value) {
+      // Given I am on a FHI quote page /health-insurance/quote
+      this.actionwords.iAmOnAFHIQuotePageHealthinsurancequote("It is a prerequisite that I already filled FHI form");
+      // Then top picks should only display
+      this.actionwords.topPicksShouldOnlyDisplay();
+      // When a shortcode parameter ""= true  is used.
+      this.actionwords.aShortcodeParameterP1TrueIsUsed("", "|show_top_picks=true|");
     }
 
-    it('Amount', function () {
-      compareHomeLoanWithANegativeValue.apply(this, [-50000]);
+    it('lifestage', function () {
+      defaultTopPicksDisplay.apply(this, ['single_male']);
     });
 
-    it('Period(Years)', function () {
-      compareHomeLoanWithANegativeValue.apply(this, [25]);
+    it('cover_type', function () {
+      defaultTopPicksDisplay.apply(this, ['combined']);
+    });
+
+    it('react-autosuggest__container', function () {
+      defaultTopPicksDisplay.apply(this, ['"state": "NSW",         "suburb": "OXFORD FALLS",         "postcode": 2100']);
     });
   });
 
 
-  it('Compare home loan with a invalid value', function () {
-    // Tags: key:Field Parameters
-    // Given I entered invalid borrowing amount
-    this.actionwords.iEnteredInvalidBorrowingAmount();
-    // And click on Compare home loans button
-    this.actionwords.clickOnCompareHomeLoansButton();
-    // Then then page should not scroll to table below
-    this.actionwords.thenPageShouldNotScrollToTableBelow();
-    // And should show validation error message for amount field
-    this.actionwords.shouldShowValidationErrorMessageForAmountField();
+  it('Top picks container', function () {
+    // Given I am on a FHI quote page /health-insurance/quote
+    this.actionwords.iAmOnAFHIQuotePageHealthinsurancequote("");
+    // Then top picks should contain three categories
+    this.actionwords.topPicksShouldContainThreeCategories("|Cheapest|  |Best value| |Most comprehensive| ");
   });
 
-  it('Pre fill inputs	in table calculator', function () {
-    // Tags: key:Field Parameters
-    // Given I entered borrowing amount and period
-    this.actionwords.iEnteredBorrowingAmountAndPeriod();
-    // And click on Compare home loans button
-    this.actionwords.clickOnCompareHomeLoansButton();
-    // Then table calculator fields should pre fill with the same values I entered in header calculator widget
-    this.actionwords.tableCalculatorFieldsShouldPreFillWithTheSameValuesIEnteredInHeaderCalculatorWidget();
+  it('Top picks - Hospital and extra', function () {
+    // Given I get a quote for Single female + Hospital and extra
+    this.actionwords.iGetAQuoteForSingleFemaleHospitalAndExtra();
+    // Then top picks should display policies for
+    this.actionwords.topPicksShouldDisplayPoliciesFor("|Hospital - Basic cover|  |Extras - Basic cover|");
   });
 
-  it('FIN HP pre fill inputs', function () {
-    // Tags: key:Field Parameters
-    // Given I enter input in FIN homepage home loan calculator
-    this.actionwords.iEnterInputInFINHomepageHomeLoanCalculator();
-    // And I click on get started button
-    this.actionwords.iClickOnGetStartedButton();
-    // Then FHL homepage calculator widget should pre-fill same values that are entered in FIN homepage home loan calculator
-    this.actionwords.fHLHomepageCalculatorWidgetShouldPrefillSameValuesThatAreEnteredInFINHomepageHomeLoanCalculator();
+  it('Top picks  - Hospital only', function () {
+    // Given I get a quote for Single female + Hospital only
+    this.actionwords.iGetAQuoteForSingleFemaleHospitalOnly();
+    // Then top picks should display policies for   Hospital - Basic cover
+    this.actionwords.topPicksShouldDisplayPoliciesForHospitalBasicCover();
   });
 
-  it('Clear calculator inputs in page refresh', function () {
-    // Tags: key:Page element
-    // Given FHL homepage is refreshed
-    this.actionwords.fHLHomepageIsRefreshed();
-    // Then Previously entered value must clear from header calculator widget and table at the bottom
-    this.actionwords.previouslyEnteredValueMustClearFromHeaderCalculatorWidgetAndTableAtTheBottom();
+  it('Top picks - Extra only', function () {
+    // Given I get a quote for Extra only
+    this.actionwords.iGetAQuoteForExtraOnly();
+    // Then top picks should display policies for   Extras - Basic cover
+    this.actionwords.topPicksShouldDisplayPoliciesForExtrasBasicCover();
   });
 
-  it('Display provider logo bar', function () {
-    // Tags: key:Page element
-    // Given I open FHL home page
-    this.actionwords.iOpenFHLHomePage();
-    // Then provider logo bar should display containing all providers
-    this.actionwords.providerLogoBarShouldDisplayContainingAllProviders();
+  it('Max top picks display', function () {
+    // Given I am on FHI quote page
+    this.actionwords.iAmOnFHIQuotePage();
+    // Then top picks should display above quote table
+    this.actionwords.topPicksShouldDisplayAboveQuoteTable();
+    // And the max number of top picks should be 3
+    this.actionwords.theMaxNumberOfTopPicksShouldBe3();
   });
 
-  it('Provider logo bar scroll', function () {
-    // Tags: key:Page element
-    // Given number of provider logos is increased in logo bar
-    this.actionwords.numberOfProviderLogosIsIncreasedInLogoBar();
-    // Then scroll bar should automatically appear on logo bar
-    this.actionwords.scrollBarShouldAutomaticallyAppearOnLogoBar();
+  describe('Top picks - Same provider', function () {
+    function topPicksSameProvider (provider_abc, provider_xyz, new_parameter_name) {
+      // Given top pick is active in FHI quote page
+      this.actionwords.topPickIsActiveInFHIQuotePage();
+      // Then top picks should display max of 2 policy from same provider
+      this.actionwords.topPicksShouldDisplayMaxOf2PolicyFromSameProvider();
+    }
+
+    it('', function () {
+      topPicksSameProvider.apply(this, ['Policy 1   ', 'Policy 2', 'Policy 3']);
+    });
   });
 
-  it('Home loan guide video', function () {
-    // Tags: key:Page element
-    // Given I click on play button of Home loan guide video
-    this.actionwords.iClickOnPlayButtonOfHomeLoanGuideVideo();
-    // Then video should play on a pop up modal
-    this.actionwords.videoShouldPlayOnAPopUpModal();
+
+  describe('Top picks - Unique policy', function () {
+    function topPicksUniquePolicy (provider_xyz, new_parameter_name_1, provider_abc) {
+      // Given top picks is active in FHI quote page
+      this.actionwords.topPicksIsActiveInFHIQuotePage();
+      // Then top picks should display unique policies for all three top picks
+      this.actionwords.topPicksShouldDisplayUniquePoliciesForAllThreeTopPicks();
+    }
+
+    it('Top pick result', function () {
+      topPicksUniquePolicy.apply(this, ['Policy 1', 'Policy 2', 'Policy 3']);
+    });
   });
 
-  it('Cross device compatibility', function () {
-    // Tags: key:Responsive
-    // Given I open home page on mobile
-    this.actionwords.iOpenHomePageOnMobile();
-    // Then all page elements should function as expected
-    this.actionwords.allPageElementsShouldFunctionAsExpected();
+
+  it('Top picks - Split policy', function () {
+    // Given top picks is active in FHI quote page
+    this.actionwords.topPicksIsActiveInFHIQuotePage();
+    // Then top picks should display any split policy
+    this.actionwords.topPicksShouldDisplayAnySplitPolicy();
   });
 
-  it('Cross browser compatibility', function () {
-    // Tags: key:Responsive
-    // Given I open home page on different browser
-    this.actionwords.iOpenHomePageOnDifferentBrowser();
-    // Then all page elements should function as expected in all browsers
-    this.actionwords.allPageElementsShouldFunctionAsExpectedInAllBrowsers();
+  it('Top picks - Without CTA button', function () {
+    // Given top picks is active in FHI quote page
+    this.actionwords.topPicksIsActiveInFHIQuotePage();
+    // Then top picks should display any split policy without CTA button
+    this.actionwords.topPicksShouldDisplayAnySplitPolicyWithoutCTAButton();
+  });
+
+  it('Top picks - Inactive policy', function () {
+    // Given top picks is active in FHI quote page
+    this.actionwords.topPicksIsActiveInFHIQuotePage();
+    // And if one of there policies goes inactive
+    this.actionwords.ifOneOfTherePoliciesGoesInactive();
+    // Then the next policy suits to these categories -  Cheapest, Best Value, Most popular should automatically display there
+    this.actionwords.theNextPolicySuitsToTheseCategoriesCheapestBestValueMostPopularShouldAutomaticallyDisplayThere();
+  });
+
+  it('Top picks - Not all top picks are available', function () {
+    // Given top picks is active in FHI quote page
+    this.actionwords.topPicksIsActiveInFHIQuotePage();
+    // And there are only 2 top picks available for that particular quote
+    this.actionwords.thereAreOnly2TopPicksAvailableForThatParticularQuote();
+    // Then top picks section should display 2 top picks and display a "not available" placeholder in place for the missing one
+    this.actionwords.topPicksSectionShouldDisplay2TopPicksAndDisplayAP1PlaceholderInPlaceForTheMissingOne("not available");
+  });
+
+  it('Top picks - Direct url access', function () {
+    // Given I open a direct quote url
+    this.actionwords.iOpenADirectQuoteUrl();
+    // Then top picks should be accessible through direct quote link
+    this.actionwords.topPicksShouldBeAccessibleThroughDirectQuoteLink();
   });
 });
